@@ -1,0 +1,65 @@
+@import '../../style/root.scss';
+
+.accordion {
+    position: relative;
+    &__btn {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        color: $black;
+        gap: $g;
+        background-color: transparent;
+        width: 100%;
+        width: 100%;
+        padding: $g;
+        border:none;
+        cursor: pointer;
+        transition: color .6s 0s;
+        &:hover {
+            // color: ;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -2px;
+        // background-color: ;
+        width: 2px;
+        height: 0;
+        transition: opacity .6s 0s, height .6s 0s;
+        z-index: 1;
+    }
+    &:hover::after,
+    &--active::after {
+        height: 100%;
+    }
+    &__title {
+        width: 100%;
+    }
+    &__icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        transition: transform .6s 0s;
+    }
+    &--active &__icon {
+        transform: rotate(-45deg);
+    }
+    &__wrapp {
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        transition: grid-template-rows .6s 0s;
+    }
+    &--active &__wrapp  {
+        grid-template-rows: 1fr;
+    }
+    &__inner {
+        min-height: 0;
+    }
+    &__content {
+        padding: $g;
+        padding-top: 0;
+    }
+}

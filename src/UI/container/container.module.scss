@@ -1,0 +1,27 @@
+@import '../../style/root.scss';
+
+.container {
+    display: grid;
+    grid-template-columns: $container-grid;
+    max-width: $container-width;
+    min-height: 100vh;
+    width: 100%;
+    margin: auto;
+    border-left: $border-line;
+    border-right: $border-line;
+    &__col {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: inherit;
+        height: 100%;
+        box-sizing: border-box;
+        &:not(:last-child) {
+            border-right: $border-line;
+        }
+    } 
+
+    &__column--padding {
+        padding: $padding-box;
+    }
+}

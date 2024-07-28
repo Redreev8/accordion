@@ -1,0 +1,27 @@
+@import '../../style/root.scss';
+
+.list {
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: $g-xs;
+    margin: 0;
+    padding: 0;
+    border-bottom: $border-line;
+    &__item {
+        margin: 0;
+        padding: 0;
+    }
+    &--border {
+        gap: 0;
+        height: 100%;
+    }
+    &--border &__item {
+        border-bottom: $border-line;
+    }
+    &--no-border-last &__item:last-child {
+        border-bottom: none;
+        height: 100%;
+    }
+}

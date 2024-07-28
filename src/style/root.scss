@@ -1,0 +1,27 @@
+@use "sass:map";
+$black: #000000;
+$gray: #4D4D4D;
+$red: #ff0000;
+$green: #00ff00;
+$border-color: #ECECEC;
+$label: #FAFAFA;
+$white: #fff;
+
+$w-container: 1524px;
+
+$g-xl: 64px;
+$g-lg: 44px;
+$g: 16px;
+$g-sx: 12px;
+$g-xs: 4px;
+
+$padding-box: 20px;
+
+$h-header: 0;
+
+$container-width: 561px + 700px;
+$container-grid: 561px 700px;
+
+$border-line-width: 2px;
+$border-line-color: $label;
+$border-line: $border-line-width solid $border-line-color;
