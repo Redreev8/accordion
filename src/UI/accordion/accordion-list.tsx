@@ -1,5 +1,5 @@
 'use client'
-import { createContext, FC, HTMLProps, ReactNode, useEffect, useRef } from 'react'
+import { createContext, FC, HTMLProps, ReactNode, useRef } from 'react'
 import style from './accordion.module.scss'
 import classNames from 'classnames'
 import List from '../list'
