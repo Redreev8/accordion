@@ -1,5 +1,5 @@
 "use client"
-import { Children, FC, forwardRef, LegacyRef, ReactNode } from 'react'
+import { Children, forwardRef, LegacyRef, ReactNode } from 'react'
 import style from './list.module.scss'
 import classNames from 'classnames'
 interface ListInterface {
