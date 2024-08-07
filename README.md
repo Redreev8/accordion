@@ -61,13 +61,6 @@ export default {
 Кнопка акорлиона
 
 ```
-interface AccordionTitleInterface extends ButtonHTMLAttributes<HTMLButtonElement> {
-    className?: string
-    children: ReactNode
-}
-```
-
-```
 {
     className?: string
     children: ReactNode
