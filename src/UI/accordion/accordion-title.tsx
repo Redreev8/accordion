@@ -1,5 +1,5 @@
 'use client'
-import { ButtonHTMLAttributes, FC, ReactNode, useContext } from 'react'
+import { ButtonHTMLAttributes, forwardRef, ReactNode, useContext } from 'react'
 import style from './accordion.module.scss'
 import classNames from 'classnames'
 import { AccordionContext } from './accordion'
@@ -8,14 +8,14 @@ interface AccordionTitleInterface extends ButtonHTMLAttributes<HTMLButtonElement
     children: ReactNode
 }
 
-const AccordionTitle: FC<AccordionTitleInterface> = ({ children, className, ...props }) => {
+const AccordionTitle = forwardRef<HTMLButtonElement, AccordionTitleInterface>(({ children, className, ...props }, ref) => {
     const toggle = useContext(AccordionContext)
     const cl = classNames(style['accordion__btn'], className)
     return (
-        <button className={ cl } onClick={ () => toggle() } { ...props }>
+        <button className={ cl } ref={ ref } onClick={ () => toggle() } { ...props }>
            { children }
         </button>
     )
-}
+})
 
 export default AccordionTitle
