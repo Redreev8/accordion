@@ -1,4 +1,6 @@
-# React + TypeScript + Vite
+# Accordion
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -28,3 +30,57 @@ export default {
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## Components Accordion
+
+### accordion--list
+
+должен принимать несколько аккордионов
+```
+{
+    children: ReactNode
+    className?: string
+    max?: number = 1 // количество максимально открытых акордионов
+}
+```
+
+### accordion
+
+Обертка для акодриона состоящия из accordion-title и accordion-content
+
+```
+{
+    className?: string
+    children: ReactNode
+    isActive?: boolean = false // будет открыт или нет при первом рендере
+}
+```
+
+### accordion-title
+
+Кнопка акорлиона
+
+interface AccordionTitleInterface extends ButtonHTMLAttributes<HTMLButtonElement> {
+    className?: string
+    children: ReactNode
+}
+
+Контент аконрдиона
+
+```
+{
+    className?: string
+    children: ReactNode
+}
+```
+
+### accordion-content
+
+Контент аконрдиона
+
+```
+{
+    className?: string
+    children: ReactNode
+}
+```
